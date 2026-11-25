@@ -1,0 +1,17 @@
+id,name,abbr,area,policy_list_itemised
+cavan-monaghan,Cavan and Monaghan ETB,CMETB,"Cavan, Monaghan",yes
+cdetb,City of Dublin ETB,CDETB,Dublin city,yes
+cork,Cork ETB,Cork ETB,Cork,yes
+donegal,Donegal ETB,DETB,Donegal,no
+ddletb,Dublin and Dún Laoghaire ETB,DDLETB,"South Dublin, Dún Laoghaire-Rathdown",yes
+galway-roscommon,Galway and Roscommon ETB,GRETB,"Galway, Roscommon",yes
+kerry,Kerry ETB,Kerry ETB,Kerry,no
+kildare-wicklow,Kildare and Wicklow ETB,KWETB,"Kildare, Wicklow",yes
+kilkenny-carlow,Kilkenny and Carlow ETB,KCETB,"Kilkenny, Carlow",yes
+laois-offaly,Laois and Offaly ETB,LOETB,"Laois, Offaly",yes
+longford-westmeath,Longford and Westmeath ETB,LWETB,"Longford, Westmeath",yes
+louth-meath,Louth and Meath ETB,LMETB,"Louth, Meath",yes
+mayo-sligo-leitrim,"Mayo, Sligo and Leitrim ETB",MSLETB,"Mayo, Sligo, Leitrim",no
+tipperary,Tipperary ETB,TETB,Tipperary,yes
+waterford-wexford,Waterford and Wexford ETB,WWETB,"Waterford, Wexford",yes
+limerick-clare,Limerick and Clare ETB,LCETB,"Limerick, Clare",yes
