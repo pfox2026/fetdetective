@@ -8,8 +8,8 @@ body:
     validations: { required: true }
   - type: input
     id: url
-    attributes: { label: Link to the original document on the ETB or official source website }
+    attributes: { label: "Link to the original document on the ETB or official source website" }
     validations: { required: true }
   - type: textarea
     id: why
-    attributes: { label: Title and anything we should know (version, date, whether it replaces another) }
+    attributes: { label: "Title and anything we should know (version, date, whether it replaces another)" }
