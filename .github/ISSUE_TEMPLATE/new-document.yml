@@ -1,0 +1,15 @@
+name: Suggest a document
+description: Suggest a policy, strategy or report that is missing
+labels: [new-document]
+body:
+  - type: input
+    id: etb
+    attributes: { label: ETB }
+    validations: { required: true }
+  - type: input
+    id: url
+    attributes: { label: Link to the original document on the ETB or official source website }
+    validations: { required: true }
+  - type: textarea
+    id: why
+    attributes: { label: Title and anything we should know (version, date, whether it replaces another) }

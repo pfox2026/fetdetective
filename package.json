@@ -1,0 +1,7 @@
+{
+  "name": "fet-detective",
+  "private": true,
+  "description": "Independent research resource on Ireland's Education and Training Boards",
+  "scripts": { "build": "python3 tools/build.py", "test:a11y": "node tests/a11y.test.js" },
+  "devDependencies": { "axe-core": "^4.10.0", "jsdom": "^25.0.0" }
+}

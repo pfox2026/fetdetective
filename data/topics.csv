@@ -1,0 +1,29 @@
+category,topic,title_pattern,note
+Accessibility and Assistive Technology,Assistive Technology,assistive,Regex matched against document title and keywords. Finds candidate documents only; it is not an assessment.
+Accessibility and Assistive Technology,Reasonable accommodation,reasonable accommodation|disability code,Regex matched against document title and keywords. Finds candidate documents only; it is not an assessment.
+Accessibility and Assistive Technology,Universal Design for Learning,universal design,Regex matched against document title and keywords. Finds candidate documents only; it is not an assessment.
+Accessibility and Assistive Technology,Accessibility statement or policy,accessib,Regex matched against document title and keywords. Finds candidate documents only; it is not an assessment.
+Learner Support,Safeguarding / child protection,safeguard|child protection,Regex matched against document title and keywords. Finds candidate documents only; it is not an assessment.
+Learner Support,Complaints,complaint,Regex matched against document title and keywords. Finds candidate documents only; it is not an assessment.
+Learner Support,Learner appeals,appeal,Regex matched against document title and keywords. Finds candidate documents only; it is not an assessment.
+Learner Support,Recognition of Prior Learning,recognition of prior|\brpl\b,Regex matched against document title and keywords. Finds candidate documents only; it is not an assessment.
+Human Resources,Recruitment,recruitment,Regex matched against document title and keywords. Finds candidate documents only; it is not an assessment.
+Human Resources,Bullying and harassment (dignity at work),bullying|harass|dignity,Regex matched against document title and keywords. Finds candidate documents only; it is not an assessment.
+Human Resources,Remote and blended working,remote working|blended working|right to disconnect|remote and blended,Regex matched against document title and keywords. Finds candidate documents only; it is not an assessment.
+Human Resources,Grievance,grievance,Regex matched against document title and keywords. Finds candidate documents only; it is not an assessment.
+Human Resources,Disciplinary,disciplin,Regex matched against document title and keywords. Finds candidate documents only; it is not an assessment.
+Governance and Corporate,Data protection,data protection|data processing|data breach|privacy|cctv,Regex matched against document title and keywords. Finds candidate documents only; it is not an assessment.
+Governance and Corporate,Freedom of Information,freedom of information,Regex matched against document title and keywords. Finds candidate documents only; it is not an assessment.
+Governance and Corporate,Protected disclosures,protected disclosure,Regex matched against document title and keywords. Finds candidate documents only; it is not an assessment.
+Governance and Corporate,Procurement,procurement,Regex matched against document title and keywords. Finds candidate documents only; it is not an assessment.
+Governance and Corporate,Risk management,risk management,Regex matched against document title and keywords. Finds candidate documents only; it is not an assessment.
+Governance and Corporate,Records management,records,Regex matched against document title and keywords. Finds candidate documents only; it is not an assessment.
+"Teaching, Learning and Quality",Quality assurance,quality assurance,Regex matched against document title and keywords. Finds candidate documents only; it is not an assessment.
+"Teaching, Learning and Quality",Assessment and examinations,assessment|examination|authentication|verification|malpractice,Regex matched against document title and keywords. Finds candidate documents only; it is not an assessment.
+"Teaching, Learning and Quality",Programme development,programme,Regex matched against document title and keywords. Finds candidate documents only; it is not an assessment.
+"Teaching, Learning and Quality","AI, digital and blended learning",blended learning|digital learning|\bai\b|artificial intelligence|generative ai,Regex matched against document title and keywords. Finds candidate documents only; it is not an assessment.
+"Health, Safety and Wellbeing",Health and safety,health and safety|safety statement|health & safety|lone working,Regex matched against document title and keywords. Finds candidate documents only; it is not an assessment.
+"Health, Safety and Wellbeing",Wellbeing,wellbeing|well-being,Regex matched against document title and keywords. Finds candidate documents only; it is not an assessment.
+"Health, Safety and Wellbeing",Adverse weather / emergency,adverse weather|emergency,Regex matched against document title and keywords. Finds candidate documents only; it is not an assessment.
+Governance and Corporate,Fraud and corruption,fraud|corruption,Regex matched against document title and keywords. Finds candidate documents only; it is not an assessment.
+Governance and Corporate,Equality and inclusion,equal opportunit|equality|inclusion,Regex matched against document title and keywords. Finds candidate documents only; it is not an assessment.

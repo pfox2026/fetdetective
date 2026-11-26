@@ -1,0 +1,23 @@
+name: Rebuild data
+# When a CSV or extracted-text file changes on main, validate it and regenerate assets/js/data.js and fulltext.js.
+on:
+  push:
+    branches: [main]
+    paths: ["data/**"]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python tools/build.py --stats
+      - name: Commit generated files
+        run: |
+          git config user.name "fet-detective-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add assets/js/data.js assets/js/fulltext.js
+          git diff --cached --quiet || (git commit -m "Rebuild generated data" && git push)

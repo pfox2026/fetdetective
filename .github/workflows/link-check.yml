@@ -1,0 +1,41 @@
+name: Link check
+# Weekly. GitHub's runners can reach ETB websites; the report is attached to the run. Sites that refuse bots show as "blocked", not "broken".
+on:
+  schedule: [{ cron: "0 6 * * 1" }]
+  workflow_dispatch:
+    inputs:
+      update:
+        description: "Stamp last_link_check on records that respond (opens a pull request)"
+        type: boolean
+        default: false
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python tools/check_links.py ${{ inputs.update && '--update' || '' }}
+      - name: Summary
+        run: |
+          echo "### Link check" >> "$GITHUB_STEP_SUMMARY"
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import csv, collections
+          rows = list(csv.DictReader(open("data/link_report.csv", encoding="utf-8")))
+          print(dict(collections.Counter(r["result"] for r in rows)))
+          for r in rows:
+              if r["result"] in ("broken", "error"): print(f"- {r['id']} {r['result']} {r['code']} {r['url']}")
+          PY
+      - uses: actions/upload-artifact@v4
+        with: { name: link-report, path: data/link_report.csv }
+      - name: Open a pull request with last_link_check dates
+        if: ${{ inputs.update }}
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "Record link check dates"
+          title: "Record link check dates"
+          branch: bot/link-check
+          add-paths: data/documents.csv

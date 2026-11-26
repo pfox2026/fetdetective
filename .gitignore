@@ -1,0 +1,7 @@
+node_modules/
+package-lock.json
+.DS_Store
+# Source PDFs are not stored in the repo: link to the originals and keep only extracted text in data/fulltext/
+pdfs/
+data/link_report.csv
+_site/

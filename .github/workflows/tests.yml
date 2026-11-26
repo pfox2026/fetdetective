@@ -1,0 +1,27 @@
+name: Tests
+# Validates the data and runs the accessibility checks on every pull request and push.
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - uses: actions/setup-node@v4
+        with: { node-version: "20" }
+      - name: Validate data (no files written)
+        run: python tools/build.py --check
+      - name: Rebuild and fail if generated files are out of date
+        run: |
+          python tools/build.py
+          git diff --exit-code assets/js/data.js assets/js/fulltext.js || (echo "Generated files are out of date. Run python tools/build.py and commit." && exit 1)
+      - name: Colour contrast
+        run: python tests/contrast.py
+      - name: Accessibility (axe-core)
+        run: |
+          npm install --no-audit --no-fund
+          npm run test:a11y
